@@ -1,14 +1,33 @@
-# Qwik City App ⚡️
+# Modern E-commerce with Qwik ⚡️
 
-- [Qwik Docs](https://qwik.dev/)
-- [Discord](https://qwik.dev/chat)
-- [Qwik GitHub](https://github.com/QwikDev/qwik)
-- [@QwikDev](https://twitter.com/QwikDev)
-- [Vite](https://vitejs.dev/)
+A high-performance e-commerce application built with Qwik, showcasing modern web development practices and real-time data management.
 
----
+## 🚀 Technologies
 
-## Project Structure
+- [Qwik](https://qwik.dev/) - Framework for high-performance web applications
+- [GraphQL](https://graphql.org/) - Query language for our API
+- [TailwindCSS](https://tailwindcss.com/) - Utility-first CSS framework
+- [Platzi Fake Store API](https://fakeapi.platzi.com/) - GraphQL API for product data
+
+## 🛠 Project Overview
+
+This e-commerce platform demonstrates:
+- Resumable state management with Qwik
+- Efficient data fetching with GraphQL
+- Responsive design with TailwindCSS
+- Shopping cart functionality
+- Product filtering and search
+- Real-time updates
+
+### ⚠️ Important Note About Data
+
+This project uses the Platzi Fake Store API, which is a public API where:
+- Data can be modified by any user
+- Products may be unstable or inconsistent
+- Images might not always be available
+- New products can be added/removed at any time
+
+## 🏗 Project Structure
 
 This project is using Qwik with [QwikCity](https://qwik.dev/qwikcity/overview/). QwikCity is just an extra set of tools on top of Qwik to make it easier to build a full site, including directory-based routing, layouts, and more.
 
@@ -63,3 +82,84 @@ The production build will generate client and server modules by running both cli
 ```shell
 npm run build # or `yarn build`
 ```
+
+## 🚦 Getting Started
+
+1. Clone the repository:
+```bash
+git clone https://github.com/your-username/your-repo-name.git
+cd your-repo-name
+```
+
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+```
+
+3. Start development server:
+```bash
+npm start
+# or
+yarn start
+```
+
+The application will be available at `http://localhost:5173`
+
+## 🛠 Available Scripts
+
+- `npm start` - Start development server
+- `npm run build` - Create production build
+- `npm run preview` - Preview production build locally
+
+## 🌐 API Integration
+
+We use GraphQL to fetch data from the Platzi Fake Store API:
+
+```typescript
+const getProducts = async () => {
+  // GraphQL query for products
+  const query = `
+    query {
+      products(limit: 10, offset: 0) {
+        title
+        price
+        images
+        description
+        category {
+          name
+        }
+      }
+    }
+  `;
+  // ... query execution
+};
+```
+
+## 🔄 State Management
+
+The application uses Qwik's built-in state management:
+- Signals for reactive state
+- Contexts for global state (shopping cart)
+- Lazy-loading for optimal performance
+
+## 📱 Features
+
+- **Product Catalog**: Browse through available products
+- **Shopping Cart**: Add/remove items, update quantities
+- **Product Filters**: Filter by category, price, and search terms
+- **Responsive Design**: Works on all device sizes
+- **Real-time Updates**: Instant feedback on user actions
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 📝 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+---
+
+Built with ⚡️ by Mateus Silva Teixeira

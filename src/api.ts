@@ -1,7 +1,7 @@
-import { gql, request, GraphQLClient } from "graphql-request";
+import { gql, GraphQLClient } from "graphql-request";
 
 const BASE_URL = "https://api.escuelajs.co/graphql";
-const BASE_URL_API_REST = "https://react-shop-backend.liara.run"
+const BASE_URL_API_REST = "https://react-shop-backend.liara.run";
 
 const client = new GraphQLClient(BASE_URL);
 
@@ -29,10 +29,7 @@ export const getProductsRest = async (): Promise<Product[]> => {
   return data;
 };
 
-export const getProducts = async (
-  limit = 20,
-  offset = 0
-): Promise<Product[]> => {
+export const getProducts = async (): Promise<Product[]> => {
   const query = gql`
     query Products {
       products {

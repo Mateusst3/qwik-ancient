@@ -1,4 +1,4 @@
-import { component$, useSignal, $, useTask$ } from "@builder.io/qwik";
+import { component$, useSignal, $, PropFunction } from "@builder.io/qwik";
 
 export interface FilterState {
   search: string;
@@ -9,7 +9,7 @@ export interface FilterState {
 }
 
 interface Props {
-  onFilterChange: (filters: FilterState) => void;
+  onFilterChange: PropFunction<(filters: FilterState) => void>;
   categories: string[];
 }
 

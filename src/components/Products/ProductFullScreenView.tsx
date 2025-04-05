@@ -1,10 +1,10 @@
-import { $, component$, useSignal, useVisibleTask$ } from "@builder.io/qwik";
+import { $, component$, useSignal, useVisibleTask$, PropFunction } from "@builder.io/qwik";
 import { Product } from "~/api";
 import { useCartContext } from "~/context/cart-context";
 
 interface Props {
   product: Product;
-  toggleFullScreen: () => void;
+  toggleFullScreen: PropFunction<() => void>;
 }
 
 export default component$(({ product, toggleFullScreen }: Props) => {

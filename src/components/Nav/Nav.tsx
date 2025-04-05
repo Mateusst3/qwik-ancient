@@ -37,12 +37,6 @@ export default component$(() => {
                 >
                   About
                 </Link>
-                <Link
-                  href="/contact"
-                  class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700 hover:text-white transition-colors"
-                >
-                  Contact
-                </Link>
               </div>
             </div>
           </div>
@@ -112,12 +106,6 @@ export default component$(() => {
             class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700 hover:text-white transition-colors"
           >
             About
-          </Link>
-          <Link
-            href="/contact"
-            class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700 hover:text-white transition-colors"
-          >
-            Contact
           </Link>
           <div class="mt-1">
             <Cart />
