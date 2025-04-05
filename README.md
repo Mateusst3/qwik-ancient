@@ -100,16 +100,16 @@ yarn install
 
 3. Start development server:
 ```bash
-npm start
+npm run dev
 # or
-yarn start
+yarn dev
 ```
 
 The application will be available at `http://localhost:5173`
 
 ## 🛠 Available Scripts
 
-- `npm start` - Start development server
+- `npm run dev` - Start development server
 - `npm run build` - Create production build
 - `npm run preview` - Preview production build locally
 
